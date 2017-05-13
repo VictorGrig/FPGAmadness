@@ -1,0 +1,9 @@
+Component Rule Check Report for : C:\Users\Великаая и добрая\Documents\GitHub\FPGAmadness\Altium\Library\ITOG.schlib
+
+
+Name                Errors
+------------------------------------------------------------------
+Enpirion Power Supply, Vout 3.3V  - 24 pin(Missing Pin Number In Sequence : 13,21,22,23,24 [2..26]) 
+Temperature sensor ADT7420(Missing Pin Number In Sequence : 5,6,7,8 [1..12]) 
+80-pin edge connector (J2)(No Footprint) 
+MAX 10 FPGFA        (Missing Pin Number In Sequence : A10,A11,A12,A13,A16,A17,A18,A19,A20,A21 [A1..A22]) 
