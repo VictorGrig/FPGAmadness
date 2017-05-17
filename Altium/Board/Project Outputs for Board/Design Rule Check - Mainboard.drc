@@ -1,0 +1,81 @@
+Protel Design System Design Rule Check
+PCB File : E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc
+Date     : 17.05.2017
+Time     : 18:50:26
+
+WARNING: Unplated multi-layer pad(s) detected
+   Pad XP2-1(22.89mm,11.24mm) on Multi-Layer on Net VCC3P3
+   Pad XP3-1(22.89mm,51.24mm) on Multi-Layer on Net GPIO_01
+   Pad XP4-1(25.8mm,56.86mm) on Multi-Layer on Net ADC_IN1
+   Pad XS1-7(75.59mm,48.735mm) on Multi-Layer on Net PMOD_A_4
+   Pad XS1-1(75.59mm,51.275mm) on Multi-Layer on Net PMOD_A_1
+   Pad XS2-7(75.59mm,8.735mm) on Multi-Layer on Net PMOD_C_4
+   Pad XS2-1(75.59mm,11.275mm) on Multi-Layer on Net PMOD_C_1
+   Pad XS3-1(20.025mm,43.64mm) on Multi-Layer on Net CPLD_TDO
+   Pad XS4-1(14.15mm,51mm) on Multi-Layer on Net NetVD10_2
+   Pad XS4-2(10.6mm,55.475mm) on Multi-Layer on Net GND
+   Pad XS4-3(7.575mm,51mm) on Multi-Layer on Net GND
+   Pad XS6-1(15.345mm,17.815mm) on Multi-Layer on Net USB_TCK
+   Pad J3-1(86mm,2mm) on Multi-Layer on Net VCC3P3
+   Pad J2-1(88.5mm,2mm) on Multi-Layer on Net VCC3P3
+   Pad J1-1(83.34mm,2.5mm) on Multi-Layer on Net NetJ1_1
+
+Processing Rule : Matched Lengths(Tolerance=1.27mm) (InxSignalClass('xSignals_DD5_DD4_MatchLengthsClass_1'))
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_DQML_PP1) And xSignal(SDRAM_DQ11_PP1) Actual Length Difference against xSignal SDRAM_DQ11_PP1 is: 9.565mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_DQ7_PP1) And xSignal(SDRAM_DQ11_PP1) Actual Length Difference against xSignal SDRAM_DQ11_PP1 is: 11.814mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_DQ6_PP1) And xSignal(SDRAM_DQ11_PP1) Actual Length Difference against xSignal SDRAM_DQ11_PP1 is: 12.062mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_DQ5_PP1) And xSignal(SDRAM_DQ11_PP1) Actual Length Difference against xSignal SDRAM_DQ11_PP1 is: 11.979mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_DQ4_PP1) And xSignal(SDRAM_DQ11_PP1) Actual Length Difference against xSignal SDRAM_DQ11_PP1 is: 12.228mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_DQ3_PP1) And xSignal(SDRAM_DQ11_PP1) Actual Length Difference against xSignal SDRAM_DQ11_PP1 is: 12.145mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_DQ2_PP1) And xSignal(SDRAM_DQ11_PP1) Actual Length Difference against xSignal SDRAM_DQ11_PP1 is: 12.228mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_DQ1_PP1) And xSignal(SDRAM_DQ11_PP1) Actual Length Difference against xSignal SDRAM_DQ11_PP1 is: 12.311mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_DQ0_PP1) And xSignal(SDRAM_DQ11_PP1) Actual Length Difference against xSignal SDRAM_DQ11_PP1 is: 12.062mm, Length Tolerance : 1.27mm.
+Rule Violations :9
+
+Processing Rule : Matched Lengths(Tolerance=1.27mm) (InxSignalClass('xSignals_DD5_DD4_MatchLengthsClass'))
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A4_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 5mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A3_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 15.5mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A5_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 2.6mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A10_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 15.5mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A6_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 2.4mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_BA1_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 15.3mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A0_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 12.7mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A1_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 10.9mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A2_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 9.1mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A7_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 2.2mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_BA0_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 14.1mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A9_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 2.8mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_CSn_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 14.9mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_CKE_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 4.2mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_CASn_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 15.5mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A12_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 1.4mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_CLK_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 4mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_WEn_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 15.3mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_RASn_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 12.7mm, Length Tolerance : 1.27mm.
+Rule Violations :19
+
+Processing Rule : Matched Lengths(Tolerance=1.27mm) (InxSignalClass('xSignals_DD5_DD4_MatchLengthsClass'))
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A4_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 5mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A3_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 15.5mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A5_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 2.6mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A10_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 15.5mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A6_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 2.4mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_BA1_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 15.3mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A0_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 12.7mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A1_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 10.9mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A2_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 9.1mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A7_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 2.2mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_BA0_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 14.1mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A9_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 2.8mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_CSn_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 14.9mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_CKE_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 4.2mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_CASn_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 15.5mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_A12_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 1.4mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_CLK_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 4mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_WEn_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 15.3mm, Length Tolerance : 1.27mm.
+   Violation between Matched Net Lengths: Between xSignal(SDRAM_RASn_PP1) And xSignal(SDRAM_A8_PP1) Actual Length Difference against xSignal SDRAM_A8_PP1 is: 12.7mm, Length Tolerance : 1.27mm.
+Rule Violations :19
+
+
+Violations Detected : 47
+Time Elapsed        : 00:00:00
