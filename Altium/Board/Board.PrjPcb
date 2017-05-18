@@ -130,6 +130,14 @@ DItemRevisionGUID=
 DocumentPath=Project Outputs for Board\Design Rule Check - Mainboard.html
 DItemRevisionGUID=
 
+[GeneratedDocument3]
+DocumentPath=Project Outputs for Board\AutoCAD PCB\Mainboard.DWG
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=Project Outputs for Free Documents\AutoCAD PCB\Mainboard.DWG
+DItemRevisionGUID=
+
 [Configuration1]
 Name=Sources
 ParameterCount=0
