@@ -1,0 +1,361 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD17\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">18.05.2017</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">12:45:25</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:06</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc" class="file"><acronym title="E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc">E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">15</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+</table>
+</td>
+</table><a name="IDAHVB3SWQ32CCIMQHZ4J4AVHEXEG3KIU35HNVPLKJMHWEKOOSOQOI"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDB2D4EXI4DNQZLKKQ25FETRO1XI5NMI4VVMGD5HGDKXBOC0RIM0OF">Unplated multi-layer pad(s) detected</a></td>
+<td class="column2">15</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">15</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0VPG2LDZG50SHZFFRCOELEFMDHMQ2NHRB3CHEHEMUVB1VFHU5OPD">Clearance Constraint (Gap=0.1mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQCNH334HW34MDBV5M1OTUP4MNBKTMFCLSAZYOQKUACLB3P0AVFLF">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDV0AJZ1GLJNZDNYCXI5I4ARXBUIUO2DBI4QCQX1KM44J0DBH54GGK">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIL24IOK0C51ZJBEI2GDB4YR5FCZIGDKFUT220IOCVDWEBPWHZFCL">Width Constraint (Min=0.1mm) (Max=1mm) (Preferred=0.1mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDMYKLNMFMOFNTO4M1PEY2G0GA4LFQGKALGMHF4MFUJIFNAFR5WKH">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUVLXFDAD3DVZGWOB2OG04VEE4P4CPVJOH2YNAKMSGPWRAFIQK1VM">Hole Size Constraint (Min=0.025mm) (Max=3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID1VFN5IRHH2W3KUOMRAKKQOGDSMNPLXEJDS5KMXGW00BOEIFOVRLK">Matched Lengths(Tolerance=1.27mm) (InxSignalClass('xSignals_DD5_DD4_MatchLengthsClass_1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDFRYEOGDHFQ5VYN3WU32A4T2BSS5BQ4PSA0CQE3LKVTRUAEZJ2E">Matched Lengths(Tolerance=1.27mm) (InxSignalClass('xSignals_DD5_DD4_MatchLengthsClass'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWYPIRE5ABYHCHTXKDMLH4JCBHM3Z4A24EY53Z1B5AUKEK2W3HWFD">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><a name="IDWOSSGY0ZAQ4INE5HVI0HHT1OGCRQTD2WZYVHYB5PSQ3JQ4CAIWG"><h2>Warnings</h2></a><a name="IDB2D4EXI4DNQZLKKQ25FETRO1XI5NMI4VVMGD5HGDKXBOC0RIM0OF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Unplated multi-layer pad(s) detected</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3182.614mil|Location2.X=3249.669mil|Location1.Y=4196.394mil|Location2.Y=4263.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3182.614mil|Location2.X=3249.669mil|Location1.Y=4196.394mil|Location2.Y=4263.449mil|Absolute=True">Pad XP2-1(22.89mm,11.24mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2365.157mil|Location2.X=5830.772mil|Location1.Y=3818.898mil|Location2.Y=6096.457mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2365.157mil|Location2.X=5830.772mil|Location1.Y=3818.898mil|Location2.Y=6096.457mil|Absolute=True">Net VCC3P3</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3297.181mil|Location2.X=3364.236mil|Location1.Y=5992.457mil|Location2.Y=6059.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3297.181mil|Location2.X=3364.236mil|Location1.Y=5992.457mil|Location2.Y=6059.512mil|Absolute=True">Pad XP4-1(25.8mm,56.86mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3297.181mil|Location2.X=3459.709mil|Location1.Y=5992.457mil|Location2.Y=6059.512mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3297.181mil|Location2.X=3459.709mil|Location1.Y=5992.457mil|Location2.Y=6059.512mil|Absolute=True">Net ADC_IN1</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5257.417mil|Location2.X=5324.472mil|Location1.Y=5672.575mil|Location2.Y=5739.63mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5257.417mil|Location2.X=5324.472mil|Location1.Y=5672.575mil|Location2.Y=5739.63mil|Absolute=True">Pad XS1-7(75.59mm,48.735mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4664.371mil|Location2.X=5324.472mil|Location1.Y=5034.45mil|Location2.Y=5739.63mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4664.371mil|Location2.X=5324.472mil|Location1.Y=5034.45mil|Location2.Y=5739.63mil|Absolute=True">Net PMOD_A_4</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5257.417mil|Location2.X=5324.472mil|Location1.Y=5772.575mil|Location2.Y=5839.63mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5257.417mil|Location2.X=5324.472mil|Location1.Y=5772.575mil|Location2.Y=5839.63mil|Absolute=True">Pad XS1-1(75.59mm,51.275mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4877.89mil|Location2.X=5324.472mil|Location1.Y=5287.339mil|Location2.Y=5839.63mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4877.89mil|Location2.X=5324.472mil|Location1.Y=5287.339mil|Location2.Y=5839.63mil|Absolute=True">Net PMOD_A_1</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5257.417mil|Location2.X=5324.472mil|Location1.Y=4097.772mil|Location2.Y=4164.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5257.417mil|Location2.X=5324.472mil|Location1.Y=4097.772mil|Location2.Y=4164.827mil|Absolute=True">Pad XS2-7(75.59mm,8.735mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4799.15mil|Location2.X=5324.472mil|Location1.Y=4097.772mil|Location2.Y=4885.89mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4799.15mil|Location2.X=5324.472mil|Location1.Y=4097.772mil|Location2.Y=4885.89mil|Absolute=True">Net PMOD_C_4</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5257.417mil|Location2.X=5324.472mil|Location1.Y=4197.772mil|Location2.Y=4264.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5257.417mil|Location2.X=5324.472mil|Location1.Y=4197.772mil|Location2.Y=4264.827mil|Absolute=True">Pad XS2-1(75.59mm,11.275mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4625.001mil|Location2.X=5324.472mil|Location1.Y=4197.772mil|Location2.Y=4941.928mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4625.001mil|Location2.X=5324.472mil|Location1.Y=4197.772mil|Location2.Y=4941.928mil|Absolute=True">Net PMOD_C_1</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3069.819mil|Location2.X=3136.874mil|Location1.Y=5471.984mil|Location2.Y=5539.039mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3069.819mil|Location2.X=3136.874mil|Location1.Y=5471.984mil|Location2.Y=5539.039mil|Absolute=True">Pad XS3-1(20.025mm,43.64mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3036.354mil|Location2.X=3338.646mil|Location1.Y=4801.118mil|Location2.Y=5539.039mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3036.354mil|Location2.X=3338.646mil|Location1.Y=4801.118mil|Location2.Y=5539.039mil|Absolute=True">Net CPLD_TDO</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2885.566mil|Location2.X=2952.622mil|Location1.Y=4455.238mil|Location2.Y=4522.293mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2885.566mil|Location2.X=2952.622mil|Location1.Y=4455.238mil|Location2.Y=4522.293mil|Absolute=True">Pad XS6-1(15.345mm,17.815mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2885.566mil|Location2.X=3081.756mil|Location1.Y=4302.102mil|Location2.Y=5025.654mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2885.566mil|Location2.X=3081.756mil|Location1.Y=4302.102mil|Location2.Y=5025.654mil|Absolute=True">Net USB_TCK</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5562.535mil|Location2.X=5629.591mil|Location1.Y=3852.299mil|Location2.Y=3919.354mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5562.535mil|Location2.X=5629.591mil|Location1.Y=3852.299mil|Location2.Y=3919.354mil|Absolute=True">Pad X1-1(83.34mm,2.5mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5552.102mil|Location2.X=5629.591mil|Location1.Y=3852.299mil|Location2.Y=3975.457mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5552.102mil|Location2.X=5629.591mil|Location1.Y=3852.299mil|Location2.Y=3975.457mil|Absolute=True">Net NetR20_1</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5669.228mil|Location2.X=5732.346mil|Location1.Y=3834.583mil|Location2.Y=3897.701mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5669.228mil|Location2.X=5732.346mil|Location1.Y=3834.583mil|Location2.Y=3897.701mil|Absolute=True">Pad X3-1(86mm,2mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2365.157mil|Location2.X=5830.772mil|Location1.Y=3818.898mil|Location2.Y=6096.457mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2365.157mil|Location2.X=5830.772mil|Location1.Y=3818.898mil|Location2.Y=6096.457mil|Absolute=True">Net VCC3P3</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5767.654mil|Location2.X=5830.772mil|Location1.Y=3834.583mil|Location2.Y=3897.701mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5767.654mil|Location2.X=5830.772mil|Location1.Y=3834.583mil|Location2.Y=3897.701mil|Absolute=True">Pad X2-1(88.5mm,2mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2365.157mil|Location2.X=5830.772mil|Location1.Y=3818.898mil|Location2.Y=6096.457mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2365.157mil|Location2.X=5830.772mil|Location1.Y=3818.898mil|Location2.Y=6096.457mil|Absolute=True">Net VCC3P3</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3182.614mil|Location2.X=3249.669mil|Location1.Y=5771.197mil|Location2.Y=5838.252mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3182.614mil|Location2.X=3249.669mil|Location1.Y=5771.197mil|Location2.Y=5838.252mil|Absolute=True">Pad XP3-1(22.89mm,51.24mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3182.614mil|Location2.X=4200.85mil|Location1.Y=5326.709mil|Location2.Y=5838.252mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3182.614mil|Location2.X=4200.85mil|Location1.Y=5326.709mil|Location2.Y=5838.252mil|Absolute=True">Net GPIO_01</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2852.299mil|Location2.X=2891.795mil|Location1.Y=5732.221mil|Location2.Y=5858.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2852.299mil|Location2.X=2891.795mil|Location1.Y=5732.221mil|Location2.Y=5858.331mil|Absolute=True">Pad XS4-1(14.15mm,51mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2852.299mil|Location2.X=2980.378mil|Location1.Y=5732.221mil|Location2.Y=5935.102mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2852.299mil|Location2.X=2980.378mil|Location1.Y=5732.221mil|Location2.Y=5935.102mil|Absolute=True">Net NetVD10_2</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2669.228mil|Location2.X=2795.339mil|Location1.Y=5951.709mil|Location2.Y=5991.205mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2669.228mil|Location2.X=2795.339mil|Location1.Y=5951.709mil|Location2.Y=5991.205mil|Absolute=True">Pad XS4-2(10.6mm,55.475mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2341.535mil|Location2.X=5803.213mil|Location1.Y=3913.323mil|Location2.Y=6094.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2341.535mil|Location2.X=5803.213mil|Location1.Y=3913.323mil|Location2.Y=6094.551mil|Absolute=True">Net GND</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.441mil|Location2.X=2632.937mil|Location1.Y=5732.221mil|Location2.Y=5858.331mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2593.441mil|Location2.X=2632.937mil|Location1.Y=5732.221mil|Location2.Y=5858.331mil|Absolute=True">Pad XS4-3(7.575mm,51mm) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2341.535mil|Location2.X=5803.213mil|Location1.Y=3913.323mil|Location2.Y=6094.551mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2341.535mil|Location2.X=5803.213mil|Location1.Y=3913.323mil|Location2.Y=6094.551mil|Absolute=True">Net GND</acronym></a></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

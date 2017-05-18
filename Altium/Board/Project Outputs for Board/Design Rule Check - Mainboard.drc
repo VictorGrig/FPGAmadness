@@ -1,0 +1,52 @@
+Protel Design System Design Rule Check
+PCB File : E:\BSUIR\FPGAmadness\Altium\Board\Mainboard.PcbDoc
+Date     : 18.05.2017
+Time     : 12:45:25
+
+WARNING: Unplated multi-layer pad(s) detected
+   Pad XP2-1(22.89mm,11.24mm) on Multi-Layer on Net VCC3P3
+   Pad XP4-1(25.8mm,56.86mm) on Multi-Layer on Net ADC_IN1
+   Pad XS1-7(75.59mm,48.735mm) on Multi-Layer on Net PMOD_A_4
+   Pad XS1-1(75.59mm,51.275mm) on Multi-Layer on Net PMOD_A_1
+   Pad XS2-7(75.59mm,8.735mm) on Multi-Layer on Net PMOD_C_4
+   Pad XS2-1(75.59mm,11.275mm) on Multi-Layer on Net PMOD_C_1
+   Pad XS3-1(20.025mm,43.64mm) on Multi-Layer on Net CPLD_TDO
+   Pad XS6-1(15.345mm,17.815mm) on Multi-Layer on Net USB_TCK
+   Pad X1-1(83.34mm,2.5mm) on Multi-Layer on Net NetR20_1
+   Pad X3-1(86mm,2mm) on Multi-Layer on Net VCC3P3
+   Pad X2-1(88.5mm,2mm) on Multi-Layer on Net VCC3P3
+   Pad XP3-1(22.89mm,51.24mm) on Multi-Layer on Net GPIO_01
+   Pad XS4-1(14.15mm,51mm) on Multi-Layer on Net NetVD10_2
+   Pad XS4-2(10.6mm,55.475mm) on Multi-Layer on Net GND
+   Pad XS4-3(7.575mm,51mm) on Multi-Layer on Net GND
+
+Processing Rule : Clearance Constraint (Gap=0.1mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.1mm) (Max=1mm) (Preferred=0.1mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=3mm) (All)
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=1.27mm) (InxSignalClass('xSignals_DD5_DD4_MatchLengthsClass_1'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=1.27mm) (InxSignalClass('xSignals_DD5_DD4_MatchLengthsClass'))
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 0
+Time Elapsed        : 00:00:06

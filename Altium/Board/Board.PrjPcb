@@ -28,7 +28,7 @@ DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
-OutputPath=
+OutputPath=Project Outputs for Board
 LogFolderPath=
 ManagedProjectGUID=
 LinkedManagedProjectGUID=
@@ -123,19 +123,11 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for Board\BGA Escape Route - Mainboard.html
-DItemRevisionGUID=
-
-[GeneratedDocument2]
 DocumentPath=Project Outputs for Board\Design Rule Check - Mainboard.html
 DItemRevisionGUID=
 
-[GeneratedDocument3]
+[GeneratedDocument2]
 DocumentPath=Project Outputs for Board\AutoCAD PCB\Mainboard.DWG
-DItemRevisionGUID=
-
-[GeneratedDocument4]
-DocumentPath=Project Outputs for Free Documents\AutoCAD PCB\Mainboard.DWG
 DItemRevisionGUID=
 
 [Configuration1]
@@ -146,6 +138,9 @@ ReleaseItemId=
 Variant=[No Variations]
 OutputJobsCount=0
 ContentTypeGUID=CB6F2064-E317-11DF-B822-12313F0024A2
+
+[Generic_EDE]
+OutputDir=Project Outputs for Board
 
 [OutputGroup1]
 Name=Netlist Outputs
